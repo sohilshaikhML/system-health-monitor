@@ -1,0 +1,140 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  color: #333;
+}
+
+.connection {
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.connection h2 {
+  color: #444;
+}
+
+.connection-info {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #666;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 20px;
+  color: #999;
+}
+
+.footer a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ... Your existing styles ... */
+
+.progress {
+  height: 15px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  line-height: 15px;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.cpu-progress {
+  width: 60%; /* Replace with actual CPU usage percentage */
+  background-color: #ff5733;
+}
+
+.memory-progress {
+  width: 40%; /* Replace with actual memory usage percentage */
+  background-color: #337ab7;
+}
+
+.disk-progress {
+  width: 75%; /* Replace with actual disk usage percentage */
+  background-color: #5cb85c;
+}
+
+/* ... Your existing styles ... */
+
+.network {
+  margin-bottom: 10%;
+}
+.network table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.network th,
+.network td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+.network th {
+  background-color: #f5f5f5;
+  font-weight: bold;
+  color: #444;
+}
+
+.network tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+.network td:first-child {
+  border-left: 4px solid #4285f4;
+}
+
+.network td:last-child {
+  border-right: 4px solid #4285f4;
+}
+
+.network td.isup {
+  color: #57ad68;
+}
+
+.network td.speed {
+  color: #fcb03b;
+}
+
+.network th::after {
+  content: "▼";
+  margin-left: 5px;
+  opacity: 0.7;
+}
+
+.network th:hover::after {
+  opacity: 1;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>System Details</title>
+</head>
+<body>
+    <div class="container">
+        <h1>System Details</h1>
+        <div class="usage">
+    <div class="usage-item">
+      <h2>CPU Usage</h2>
+      <div class="progress">
+        <div class="progress-bar cpu-progress" style="width: {{cpu_usage}}%;">{{cpu_usage}}%</div>
+      </div>
+    </div>
+
+    <div class="usage-item">
+      <h2>Memory Usage</h2>
+      <div class="progress">
+        <div class="progress-bar memory-progress" style="width: {{memory_usage}}%;">{{memory_usage}}%</div>
+      </div>
+    </div>
+
+    <div class="usage-item">
+      <h2>Disk Usage</h2>
+      <div class="progress">
+        <div class="progress-bar disk-progress" style="width:{{ disk_usage }}%;">{{disk_usage}}%</div>
+      </div>
+    </div>
+  </div>
+
+        <div class="network">
+  <h2>Network Interfaces:</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Interface</th>
+        <th>Is Up</th>
+        <th>Speed</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for interface, stats in network_interfaces.items() %}
+        <tr>
+          <td>{{ interface }}</td>
+          <td>{{ stats.isup }}</td>
+          <td>{{ stats.speed }} Mbps</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+    </div>
+</body>
+</html>
